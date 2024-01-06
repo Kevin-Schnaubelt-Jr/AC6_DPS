@@ -1,21 +1,21 @@
-damage=2352
-impact=690
-acc_impact=330
-fire_rate=2
+damage=256
+impact=104
+acc_impact=46
+fire_rate=0.6
 charge_time=3.8
 reload_time=4.559
 mag=28
 is_heat_mag = True
 is_overheat = False
 is_charged_attack = False
-is_charged_infinite = False
+is_charged_infinite = True
 charged_attack_mag= 1
 energy_specialization = 100
-heat_build = 420
-cooling_rate = 246
-cooling_delay = 1.7
-overheat_cooling_rate = 85
-overheat_cooling_delay = 1.7
+heat_build=137
+cooling_rate=413
+cooling_delay=0.7
+overheat_cooling_rate=100
+overheat_cooling_delay=.7
 if (is_heat_mag):
     energy_specialization-=100
     damage = damage * (1 + energy_specialization * 0.005)
@@ -39,7 +39,7 @@ if (is_heat_mag):
     if (is_charged_attack):
         charge_time = charge_time * (100 - energy_specialization) * 0.01
         print(f"{charge_time=}")
-        fire_rate = fire_rate + charge_time
+        fire_rate = fire_rate + charge_time + 1
         mag = charged_attack_mag
         reload_time = 1000 / (cooling_rate * overheat_cooling_rate * 0.01)
         reload_time+=overheat_cooling_delay
@@ -245,7 +245,7 @@ ips=115.91459304478263
 acc_ips=47.58599082891077
 
 ___LR___
-heat_build=160
+heat_build=160 * 137
 cooling_rate=413
 cooling_delay=0.7
 overheat_cooling_rate=85
@@ -264,13 +264,11 @@ dps=228.5
 ips=92.8
 acc_ips=41.0
 -OVERHEAT-
-dps=214.6 * 244.8
-ips=87.2 * 99.4
-acc_ips=38.5 * 44.0
+dps=214.6 * 258.6
+ips=87.2 * 105
+acc_ips=38.5 * 46.5
 -CHARGED-
-dps=339.4
-ips=138.9
-acc_ips=50.0
+dps=265.7
 
 ___LRA___
 heat_build=205
@@ -296,9 +294,7 @@ dps=215.3 * 244.5
 ips=94.3 * 107.1
 acc_ips=39.4 * 44.7
 -CHARGED-
-dps=289.1
-ips=92.2
-acc_ips=39.7
+dps=246.6
 
 ___LRB___
 heat_build=280
