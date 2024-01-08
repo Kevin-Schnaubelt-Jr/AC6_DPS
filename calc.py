@@ -1,22 +1,22 @@
-damage=239
-impact=285
-acc_impact=109
-fire_rate=0.8
-reload_time=3
-charge_time=.5
-mag=10
+damage=149
+impact=135
+acc_impact=52
+fire_rate=0.4
+reload_time=2.2
+mag=12
 is_heat_mag = False
 is_overheat = False
 is_charged_attack = False
 is_charged_infinite = False
-charged_attack_mag= 5
-charged_fire_rate=2
+charge_time=.9
+charged_attack_mag= 2
+charged_fire_rate=1.3
 energy_specialization = 100
-heat_build=230
-cooling_rate=344
-cooling_delay=0.7
-overheat_cooling_rate=100
-overheat_cooling_delay=1.3
+heat_build=9
+cooling_rate=194
+cooling_delay=.4
+overheat_cooling_rate=95
+overheat_cooling_delay=.7
 if (is_heat_mag):
     energy_specialization-=100
     damage = damage * (1 + energy_specialization * 0.005)
@@ -81,7 +81,8 @@ print(f"{ips=}")
 print(f"{acc_ips=}")
 
 '''
----Vanilla---
+---Rifles---
+
 ___Turner___
 W 3560
 R 171
@@ -183,13 +184,14 @@ ips=240.0 * 293.4
 acc_ips=110.0 * 128.4
 
 ___GAT___
-cooling_rate=220
-cooling_delay=1 * 0.5
-overheat_cooling_rate=85
-overheat_cooling_delay=1.3 * 1
+heat_build=9
+cooling_rate=220 * 194
+cooling_delay=1 * 0.4
+overheat_cooling_rate=85 * 95
+overheat_cooling_delay=1.3 * 0.7
 total_damage=2775
 total_impact=2220
-total_acc_impact=1221
+total_acc_impact=1221 
 damage=25
 impact=20
 acc_impact=11
@@ -197,13 +199,13 @@ fire_rate=0.05
 reload_time=5.5 * 5.0
 mag=111
 -IDEAL-
-dps=250.1 * 261.9
-ips=200.0 * 209.5
-acc_ips=110.0 * 115.2
+dps=251.2 * 151.0
+ips=201.0
+acc_ips=110.5
 -OVERHEAT-
-dps=228.6 * 234.4
-ips=182.8 * 187.5
-acc_ips=100.5 * 103.1
+dps=229.5 * 239.8
+ips=183.6
+acc_ips=101 * 105.5
 
 ___back gat___
 cooling_rate=650
@@ -227,6 +229,42 @@ acc_ips=82.22025652366209
 dps=147.29275542517433
 ips=122.74396285431196
 acc_ips=67.50917956987158
+
+---Shotguns---
+
+___Halderman___
+total_time=1.4000000000000001
+fire_time=0.1
+total_damage=576
+total_impact=360
+total_acc_impact=280
+damage=576
+impact=360
+acc_impact=280
+fire_rate=0.1
+reload_time=1.3
+mag=1
+dps=411.4
+ips=257.1
+acc_ips=200.0
+
+___Zimmerman___
+total_time=2.1
+fire_time=0.1
+total_damage=800
+total_impact=620
+total_acc_impact=360
+damage=800
+impact=620
+acc_impact=360
+fire_rate=0.1
+reload_time=2
+mag=1
+dps=381.0
+ips=295.2
+acc_ips=171.4
+
+---Pistols---
 
 ___Coquillett___
 total_time=4.9
@@ -254,7 +292,7 @@ acc_impact=151
 fire_rate=0.6
 reload_time=2.5
 mag=7
-dps=245.5
+dps=245.5 
 ips=313.4
 acc_ips=157.8
 
@@ -273,12 +311,14 @@ dps=287.3
 ips=309.5
 acc_ips=201.6
 
+---Lasers---
+
 ___LH___
 heat_build=90
 cooling_rate=315
 cooling_delay=0.5
-overheat_cooling_rate=85
-overheat_cooling_delay=1.3
+overheat_cooling_rate=85 * 90
+overheat_cooling_delay=1.3 * 0.5
 total_damage=1925
 total_impact=1045
 total_acc_impact=429
@@ -289,13 +329,15 @@ fire_rate=0.4
 reload_time=3.6
 mag=11
 -IDEAL-
-dps=238.4
-ips=129.4
-acc_ips=53.1
+dps=250.8
+ips=136.2
+acc_ips=55.9
 -OVERHEAT-
-dps=213.5
-ips=115.9
-acc_ips=47.5
+dps=222.6 * 249.2
+ips=120.8
+acc_ips=49.6
+-CHARGED-
+dps=294.9
 
 ___LR___
 heat_build=160
@@ -358,7 +400,7 @@ charge_time=2.3 * 1.8
 charged_heat = 1000
 heat_build=280
 cooling_rate=246
-cooling_delay=1.7 * 1.2
+cooling_delay=1.7 * 1.4
 overheat_cooling_rate=85
 overheat_cooling_delay=1.7
 total_damage=2334
@@ -382,7 +424,7 @@ acc_ips=50.2
 dps=248.0 * 261.9
 
 ___KRSV___
-heat_build=120
+heat_build=120 * 231
 cooling_rate=167 * 344
 cooling_delay=0.7
 overheat_cooling_rate=70 * 100
@@ -393,7 +435,7 @@ total_acc_impact=608
 damage=312
 impact=112
 acc_impact=76
-fire_rate=0.3 * 0.25
+fire_rate=0.3
 reload_time=6.6
 mag=8
 -IDEAL-
@@ -401,17 +443,49 @@ dps=284.0 * 286.4
 ips=102.0
 acc_ips=69.2
 -OVERHEAT-
-dps=216.8 * 300
+dps=216.8 * 276.9
 ips=77.8
 acc_ips=52.8
 -CHARGED 1-
-dps=255 * 300
+dps=255 * 301.5
 damage=1098
 charged_mag = 5
 charged_fire_rate = 1.2 * 2
 -CHARGED 2-
 dps=160.1 * 300
-charge_time=2
+charge_time=4 * 3
+
+___Laser Shotgun___
+heat_build=190
+cooling_rate=203 * 255
+cooling_delay=1.4
+overheat_cooling_rate=85  * 100
+overheat_cooling_delay=1.6
+total_time=11.526
+fire_time=5.2
+total_damage=2800.0       
+total_impact=1520
+total_acc_impact=440      
+damage=560.0
+impact=304
+acc_impact=88
+fire_rate=1.3
+reload_time=6.326
+mag=5
+-IDEAL-
+dps=242.9
+ips=131.9
+acc_ips=38.2
+-OVERHEAT-
+dps=241.8
+ips=131.3
+acc_ips=38.0
+-CHARGED-
+charge_time=.9
+charged_fire_rate=1.3
+charged_attack_mag=2
+dps=219.8
+dps=252 on staggered target - 45di
 
 ___WLT___
 heat_build=201
@@ -438,28 +512,6 @@ ips=63.4
 acc_ips=63.4
 
 
-___LS___
-cooling_rate=203
-cooling_delay=1.4
-overheat_cooling_rate=85
-overheat_cooling_delay=1.6
-total_damage=2800
-total_impact=1520
-total_acc_impact=440
-damage=560
-impact=304
-acc_impact=88
-fire_rate=1.3
-reload_time=6.326108374384237
-mag=5
--IDEAL-
-dps=218.3047202058609
-ips=118.50827668318162
-acc_ips=34.305027460920996
--OVERHEAT-
-dps=221.11923477385324
-ips=120.03615602009175
-acc_ips=34.74730832160551
 
 ___LCS___
 cooling_rate=210
@@ -542,23 +594,23 @@ damage=38
 impact=11
 acc_impact=6
 fire_rate=0.05
-reload_time=2.0051364365971107
+reload_time=2.
 mag=29
 -IDEAL-
-dps=318.94543680750735
-ips=92.32631065480476
-acc_ips=50.35980581171169
+dps=318.9
+ips=92.3
+acc_ips=50.3
 -OVERHEAT-
-dps=243.15353198482322
-ips=70.38654873244883
-acc_ips=38.39266294497209
+dps=243.1
+ips=70.3
+acc_ips=38.3
 
 ___Pulse Gun 2___
-heat_build=55 * 50
+heat_build=55
 cooling_rate=295
 cooling_delay=0.4
-overheat_cooling_rate=85 * 115
-overheat_cooling_delay=1.3 * 0.4
+overheat_cooling_rate=85 
+overheat_cooling_delay=1.3 
 total_damage=1224
 total_impact=432
 total_acc_impact=216
@@ -569,17 +621,18 @@ fire_rate=0.1
 reload_time=3.789830508474576
 mag=18
 -IDEAL-
-dps=218.9 * 249.7
-ips=77.2 * 88.1
-acc_ips=38.6 * 44.0
+dps=218.9
+ips=77.2
+acc_ips=38.6
 -OVERHEAT-
 dps=179.74312028406567 * 276.9
 ips=63.4 * 97.7
 acc_ips=31.7 * 48.8
 
----Rifles---
+---LRs---
 
 ___RF___
+charged_direct_damage=120 * 130
 ideal = 200
 vel = 530
 total_damage=3360
@@ -596,12 +649,14 @@ ips=296.3
 acc_ips=110.0
 
 ___Curtis___
+Velocity=600 * 700
+charged_velocity= 840
 total_time=7.0
 fire_time=4.8
 total_damage=1704
 total_impact=1620
 total_acc_impact=624
-damage=142
+damage=142 * 149
 impact=135
 acc_impact=52
 fire_rate=0.4
@@ -612,20 +667,25 @@ ips=231.4
 acc_ips=89.1
 
 ___Harris___
+Velocity=650 * 730
+charged_velocity= 900
 total_time=11.0
 fire_time=8.0
 total_damage=2390
 total_impact=2850
 total_acc_impact=1090
-damage=239
+damage=239 * 267
 impact=285
 acc_impact=109
 fire_rate=0.8
-reload_time=3
+reload_time=3 * 1.9
 mag=10
-dps=217.3
+dps=217.3 * 269.7
 ips=259.1
 acc_ips=99.1
+--CHARGED--
+damage=977 * 1122
+direct_impact=120 * 130
 
 ---Missiles---
 
