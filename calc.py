@@ -1,22 +1,22 @@
-damage=778
-impact=288
-acc_impact=134
-fire_rate=1.4
+damage=312
+impact=112
+acc_impact=76
+fire_rate=0.25
 reload_time=1.9
-charge_time=2.3
+charge_time=.5
 mag=5
 is_heat_mag = True
 is_overheat = True
 is_charged_attack = False
 is_charged_infinite = False
-charged_attack_mag= 1
+charged_attack_mag= 5
 charged_fire_rate=2
 energy_specialization = 100
-heat_build=280
-cooling_rate=246
-cooling_delay=1.7
-overheat_cooling_rate=85
-overheat_cooling_delay=1.7
+heat_build=230
+cooling_rate=344
+cooling_delay=0.7
+overheat_cooling_rate=100
+overheat_cooling_delay=1.3
 if (is_heat_mag):
     energy_specialization-=100
     damage = damage * (1 + energy_specialization * 0.005)
@@ -302,7 +302,7 @@ heat_build=160
 cooling_rate=413
 cooling_delay=0.7
 overheat_cooling_rate=85
-overheat_cooling_delay=1.3
+overheat_cooling_delay=1.3 * 0.7
 charge_time=1.6
 total_damage=1536
 total_impact=624
@@ -318,20 +318,20 @@ dps=250.9
 ips=101.9
 acc_ips=45.1
 -OVERHEAT-
-dps=244.8
-ips=99.4
-acc_ips=44.0
+dps=231.3 * 250.7
+ips=93.9
+acc_ips=41.6
 -CHARGED-
 charged_fire_rate=2
 dps=284.2
 
 ___LRA___
-charge_time= 3.8
-heat_build=205
-cooling_rate=281
+charge_time= 3.8 * 3.4
+heat_build=205 * 172
+cooling_rate=281 * 258
 cooling_delay=1
 overheat_cooling_rate=85
-overheat_cooling_delay=1.6
+overheat_cooling_delay=1.6 * 1.1
 charge_time=3.8
 total_damage=2215
 total_impact=970
@@ -343,22 +343,22 @@ fire_rate=0.9
 reload_time=4.559
 mag=4
 -IDEAL-
-dps=244.1
+dps=244.1 * 261.3
 ips=106.9
 acc_ips=44.6
 -OVERHEAT-
-dps=236.0
+dps=236.0 * 261.6
 ips=103.3
 acc_ips=43.1
 -CHARGED-
-dps=258.0
+dps=258.0 * 274.9
 
 ___LRB___
-charge_time=2.3
+charge_time=2.3 * 1.8
 charged_heat = 1000
 heat_build=280
 cooling_rate=246
-cooling_delay=1.7
+cooling_delay=1.7 * 1.2
 overheat_cooling_rate=85
 overheat_cooling_delay=1.7
 total_damage=2334
@@ -371,7 +371,7 @@ fire_rate=1.4
 reload_time=5.765
 mag=3
 -IDEAL-
-dps=272.5
+dps=272.5 * 289.4
 ips=100.9
 acc_ips=46.9
 -OVERHEAT-
@@ -379,37 +379,39 @@ dps=291.3
 ips=107.8
 acc_ips=50.2
 -CHARGED-
-dps=248.0
+dps=248.0 * 261.9
 
 ___KRSV___
-heat_build=120 * 188
-cooling_rate=167 * 286
+heat_build=120
+cooling_rate=167 * 344
 cooling_delay=0.7
 overheat_cooling_rate=70 * 100
-overheat_cooling_delay=2 * 0.7
+overheat_cooling_delay=2 * 1.3
 total_damage=2496
 total_impact=896
 total_acc_impact=608
 damage=312
 impact=112
 acc_impact=76
-fire_rate=0.3
+fire_rate=0.3 * 0.25
 reload_time=6.6
 mag=8
 -IDEAL-
-dps=274.6
-ips=98.5
-acc_ips=66.9
+dps=284.0
+ips=102.0
+acc_ips=69.2
 -OVERHEAT-
-dps=211.8
-ips=76.0
-acc_ips=51.6
+dps=216.8
+ips=77.8
+acc_ips=52.8
 -CHARGED 1-
-* dps=290.1
-* damage=1083
+dps=255
+damage=1098
+charged_mag = 5
+charged_fire_rate = 1.2 * 2
 -CHARGED 2-
-* dps=300.3
-* charge_time=2
+dps=160.1
+charge_time=2
 
 ___WLT___
 heat_build=201
