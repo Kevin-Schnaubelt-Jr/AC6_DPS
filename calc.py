@@ -1,12 +1,12 @@
-damage=312
-impact=112
-acc_impact=76
-fire_rate=0.25
-reload_time=1.9
+damage=239
+impact=285
+acc_impact=109
+fire_rate=0.8
+reload_time=3
 charge_time=.5
-mag=5
-is_heat_mag = True
-is_overheat = True
+mag=10
+is_heat_mag = False
+is_overheat = False
 is_charged_attack = False
 is_charged_infinite = False
 charged_attack_mag= 5
@@ -397,20 +397,20 @@ fire_rate=0.3 * 0.25
 reload_time=6.6
 mag=8
 -IDEAL-
-dps=284.0
+dps=284.0 * 286.4
 ips=102.0
 acc_ips=69.2
 -OVERHEAT-
-dps=216.8
+dps=216.8 * 300
 ips=77.8
 acc_ips=52.8
 -CHARGED 1-
-dps=255
+dps=255 * 300
 damage=1098
 charged_mag = 5
 charged_fire_rate = 1.2 * 2
 -CHARGED 2-
-dps=160.1
+dps=160.1 * 300
 charge_time=2
 
 ___WLT___
@@ -577,7 +577,7 @@ dps=179.74312028406567 * 276.9
 ips=63.4 * 97.7
 acc_ips=31.7 * 48.8
 
-
+---Rifles---
 
 ___RF___
 ideal = 200
@@ -594,6 +594,38 @@ mag=15
 dps=270.9
 ips=296.3
 acc_ips=110.0
+
+___Curtis___
+total_time=7.0
+fire_time=4.8
+total_damage=1704
+total_impact=1620
+total_acc_impact=624
+damage=142
+impact=135
+acc_impact=52
+fire_rate=0.4
+reload_time=2.2
+mag=12
+dps=243.4
+ips=231.4
+acc_ips=89.1
+
+___Harris___
+total_time=11.0
+fire_time=8.0
+total_damage=2390
+total_impact=2850
+total_acc_impact=1090
+damage=239
+impact=285
+acc_impact=109
+fire_rate=0.8
+reload_time=3
+mag=10
+dps=217.3
+ips=259.1
+acc_ips=99.1
 
 ---Missiles---
 
