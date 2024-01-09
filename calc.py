@@ -1,9 +1,9 @@
-damage=149
-impact=135
-acc_impact=52
-fire_rate=0.4
-reload_time=2.2
-mag=12
+damage=103
+impact=72
+acc_impact=43
+fire_rate=.16
+reload_time=6.4 + .8
+mag=10
 is_heat_mag = False
 is_overheat = False
 is_charged_attack = False
@@ -697,6 +697,39 @@ homingStopRange = 45 * 11
 
 ___vert plasma missile Vvc-70VPM___
 homingStopRange = 32 * 18
+
+___4 pod normal___
+damage=103
+impact=72
+acc_impact=43
+fire_rate=0.05
+reload_time=4
+lock_time=0.3
+dps=89.2
+ips=62.3
+acc_ips=37.2
+
+___6 pod normal___
+damage=103
+impact=72
+acc_impact=43
+fire_rate=0.08
+reload_time=5
+lock_time=0.4
+dps=105.1
+ips=73.5
+acc_ips=43.9
+
+___10 pod normal___
+damage=103
+impact=72
+acc_impact=43
+fire_rate=0.16
+reload_time=6.4
+lock_time=0.8
+dps=117.0
+ips=81.8
+acc_ips=48.9
 
 ---Generators---
 
