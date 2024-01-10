@@ -1,22 +1,22 @@
-damage=103
-impact=288
-acc_impact=134
-fire_rate=.16
-reload_time=6.4 + .8
-mag=10
-is_heat_mag = False
+damage=560.0
+impact=304
+acc_impact=88
+fire_rate=1.3
+reload_time=4 + 0.3
+mag=4
+is_heat_mag = True
 is_overheat = False
 is_charged_attack = False
 is_charged_infinite = False
-charge_time=1.6
-charged_attack_mag=0
-charged_fire_rate=2
+charge_time=3.5
+charged_attack_mag=2
+charged_fire_rate=1.7
 energy_specialization = 100
-heat_build=280
-cooling_rate=246
-cooling_delay=1.7
-overheat_cooling_rate=85
-overheat_cooling_delay=1.7
+heat_build=161
+cooling_rate=303
+cooling_delay=1.4
+overheat_cooling_rate=100
+overheat_cooling_delay=2
 if (is_heat_mag):
     energy_specialization-=100
     damage = damage * (1 + energy_specialization * 0.005)
@@ -208,6 +208,7 @@ ips=183.6
 acc_ips=101 * 105.5
 
 ___back gat___
+heat_build=39
 cooling_rate=650
 cooling_delay=0.125
 overheat_cooling_rate=90
@@ -329,9 +330,9 @@ fire_rate=0.4
 reload_time=3.6
 mag=11
 -IDEAL-
-dps=250.8
-ips=136.2
-acc_ips=55.9
+dps=251.9
+ips=136.7
+acc_ips=56.1
 -OVERHEAT-
 dps=222.6 * 249.2
 ips=120.8
@@ -356,9 +357,9 @@ fire_rate=0.6
 reload_time=3.121
 mag=6
 -IDEAL-
-dps=250.9
-ips=101.9
-acc_ips=45.1
+dps=255.0
+ips=103.6
+acc_ips=45.8
 -OVERHEAT-
 dps=231.3 * 250.7
 ips=93.9
@@ -369,12 +370,11 @@ dps=284.2
 
 ___LRA___
 charge_time= 3.8 * 3.4
-heat_build=205 * 172
-cooling_rate=281 * 258
+heat_build=205
+cooling_rate=281
 cooling_delay=1
-overheat_cooling_rate=85
-overheat_cooling_delay=1.6 * 1.1
-charge_time=3.8
+overheat_cooling_rate=85 * 95
+overheat_cooling_delay=1.6 * 1
 total_damage=2215
 total_impact=970
 total_acc_impact=405
@@ -385,18 +385,20 @@ fire_rate=0.9
 reload_time=4.559
 mag=4
 -IDEAL-
-dps=244.1 * 261.3
-ips=106.9
-acc_ips=44.6
+dps=267.8
+ips=117.3
+acc_ips=49.0
 -OVERHEAT-
 dps=236.0 * 261.6
 ips=103.3
 acc_ips=43.1
 -CHARGED-
+damage=1677
+fire_rate=2
+charge_time=3.8
 dps=258.0 * 274.9
 
 ___LRB___
-charge_time=2.3 * 1.8
 charged_heat = 1000
 heat_build=280
 cooling_rate=246
@@ -413,54 +415,90 @@ fire_rate=1.4
 reload_time=5.765
 mag=3
 -IDEAL-
-dps=272.5 * 289.4
+dps=295
 ips=100.9
-acc_ips=46.9
+acc_ips=52
 -OVERHEAT-
 dps=291.3
 ips=107.8
 acc_ips=50.2
 -CHARGED-
+damage=1176 * 2
+fire_rate=2
+charge_time=2.3 * 1.8
 dps=248.0 * 261.9
 
+___Wuerger/66E___
+heat_build=180
+cooling_rate=291
+cooling_delay=1
+overheat_cooling_rate=85
+overheat_cooling_delay=1
+total_time=9.543
+fire_time=4.5
+total_damage=3024.0
+total_impact=2430
+total_acc_impact=864
+damage=504.0
+impact=405
+acc_impact=144
+fire_rate=0.9
+reload_time=5.043
+mag=6
+-IDEAL-
+dps=327.6
+ips=263.2
+acc_ips=93.6
+-OVERHEAT-
+dps=316.9
+ips=254.6
+acc_ips=90.5
+
 ___KRSV___
-heat_build=120 * 231
-cooling_rate=167 * 344
+heat_build=120
+cooling_rate=167
 cooling_delay=0.7
 overheat_cooling_rate=70 * 100
-overheat_cooling_delay=2 * 1.3
-total_damage=2496
+overheat_cooling_delay=2 * .7
+total_time=8.549
+fire_time=2.1
+total_damage=2496.0
 total_impact=896
 total_acc_impact=608
-damage=312
+damage=312.0
 impact=112
 acc_impact=76
-fire_rate=0.3
-reload_time=6.6
+fire_rate=0.3 * .38
+reload_time=6.449
 mag=8
 -IDEAL-
-dps=284.0 * 286.4
-ips=102.0
-acc_ips=69.2
+dps=292.0 * 288.7
+ips=104.8
+acc_ips=71.1
 -OVERHEAT-
-dps=216.8 * 276.9
+dps=216.8
 ips=77.8
 acc_ips=52.8
 -CHARGED 1-
-dps=255 * 301.5
 damage=1098
 charged_mag = 5
-charged_fire_rate = 1.2 * 2
+charged_fire_rate = 1.2 * 1.4
+charge_time=0.5
+dps=257.1 * dps=300.2
 -CHARGED 2-
-dps=160.1 * 300
-charge_time=4 * 3
+damage=2522
+charged_mag = 1 * 2
+charged_fire_rate = 2 * 1.7
+charge_time=4.5 * 3.5
+heat = 995
+dps=160.1
 
 ___Laser Shotgun___
-heat_build=190
-cooling_rate=203 * 255
+heat_build=190 * 161
+cooling_rate=203 * 303
 cooling_delay=1.4
 overheat_cooling_rate=85  * 100
-overheat_cooling_delay=1.6
+overheat_cooling_delay=1.6 * 2
 total_time=11.526
 fire_time=5.2
 total_damage=2800.0       
@@ -473,14 +511,15 @@ fire_rate=1.3
 reload_time=6.326
 mag=5
 -IDEAL-
-dps=242.9
-ips=131.9
-acc_ips=38.2
+dps=248.2 * 303
+ips=134.8
+acc_ips=39.0
 -OVERHEAT-
-dps=241.8
+dps=241.8 * 299.2
 ips=131.3
 acc_ips=38.0
 -CHARGED-
+damage=1307
 charge_time=.9
 charged_fire_rate=1.3
 charged_attack_mag=2
@@ -488,55 +527,61 @@ dps=219.8
 dps=252 on staggered target - 45di
 
 ___WLT___
-heat_build=201
-cooling_rate=200
+heat_build=200
+cooling_rate=180
 cooling_delay=1
 overheat_cooling_rate=85
 overheat_cooling_delay=1.6
-total_damage=1620
+total_time=8.144
+fire_time=2.7
+total_damage=1620.0
 total_impact=608
 total_acc_impact=608
-damage=405
+damage=405.0
 impact=152
 acc_impact=152
 fire_rate=0.9
-reload_time=6.0
+reload_time=5.444
 mag=4
 -IDEAL-
-dps=168.8
-ips=63.3
-acc_ips=63.3
+dps=198.9
+ips=74.7
+acc_ips=74.7
 -OVERHEAT-
-dps=169.0
-ips=63.4
-acc_ips=63.4
+dps=172.5
+ips=64.8
+acc_ips=64.8
 
 
 
 ___LCS___
+heat_build=320
 cooling_rate=210
 cooling_delay=1.7
 overheat_cooling_rate=85
 overheat_cooling_delay=1.6
-total_damage=2775
+total_time=9.271
+fire_time=3.0
+total_damage=2775.0
 total_impact=1500
 total_acc_impact=540
-damage=925
+damage=925.0
 impact=500
 acc_impact=180
 fire_rate=1.5
-reload_time=6.461904761904762
+reload_time=6.271
 mag=3
 -IDEAL-
-dps=253.14943527367507
-ips=136.8375325803649
-acc_ips=49.26151172893136
+dps=299.3
+ips=161.8
+acc_ips=58.2
 -OVERHEAT-
-dps=280.2554527709412
-ips=151.48943393023848
-acc_ips=54.536196214885855
+dps=316.2
+ips=170.9
+acc_ips=61.5
 
 ___LCD___
+heat_build=440
 cooling_rate=232
 cooling_delay=1.7
 overheat_cooling_rate=85
@@ -560,27 +605,30 @@ ips=161.04721895479753
 acc_ips=50.700050411695514
 
 ___LCB___
+heat_build=320
 cooling_rate=172
 cooling_delay=2.3
 overheat_cooling_rate=75
 overheat_cooling_delay=2
-total_damage=3603
+total_time=11.881
+fire_time=4
+total_damage=3603.0
 total_impact=2280
 total_acc_impact=540
-damage=1201
+damage=1201.0
 impact=760
 acc_impact=180
 fire_rate=2
-reload_time=8.113953488372093
+reload_time=7.881
 mag=3
 -IDEAL-
-dps=255.27928818586258
-ips=161.5422639644093
-acc_ips=38.260009886307465
+dps=303.3
+ips=191.9
+acc_ips=45.5
 -OVERHEAT-
-dps=270.61834061135374
-ips=171.24890829694323
-acc_ips=40.5589519650655
+dps=305.0
+ips=193.0
+acc_ips=45.7
 
 ___Pulse Gun 1___
 cooling_rate=623
@@ -705,9 +753,9 @@ acc_impact=43
 fire_rate=0.05
 reload_time=4
 lock_time=0.3
-dps=89.2
-ips=62.3
-acc_ips=37.2
+dps=91.6
+ips=84.4
+acc_ips=34.7
 
 ___6 pod normal___
 damage=103
