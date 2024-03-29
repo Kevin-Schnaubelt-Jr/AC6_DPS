@@ -1,5 +1,5 @@
 damage=560.0
-impact=304
+impact=30
 acc_impact=88
 fire_rate=1.3
 reload_time=4 + 0.3
